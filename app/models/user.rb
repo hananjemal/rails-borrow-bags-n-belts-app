@@ -6,7 +6,6 @@ class User < ApplicationRecord
   # Renters bookings
   # Lessors items
   has_many :items
-
-  # has_many :bookings
-  # has_many :booked_items, through: :bookings, source: :items
+  has_many :bookings
+  has_many :booked_items, through: :bookings, source: :items
 end
