@@ -53,9 +53,11 @@
 
 
   <div class="card" style="width: 18rem;">
-  <img <%= cl_image_tag("zara_fabric_shopper_fimwzh") %>
+  <% @items.each do |item| %>
+  <img <%=item.picture_url%>>
   <div class="card-body">
-    <h5 class="card-title">Bag name</h5>
-    <a href="#" class="btn btn-primary">Details</a>
+    <h5 class="card-title"><%= item.brand %></h5>
+    <a href="#" class="btn btn-primary"><%= item.description %></a>
   </div>
+  <% end %>
 </div>
