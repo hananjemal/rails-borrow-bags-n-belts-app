@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :items
     # resources :bookings, only: [:new,:create]
-
+    get 'profile', to: 'users#show'
 end
