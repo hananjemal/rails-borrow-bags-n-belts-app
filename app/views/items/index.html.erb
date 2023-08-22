@@ -16,9 +16,14 @@
 <%= cl_image_tag("Screenshot_2023-08-22_at_12.27.41_fpp3uj",
       width: 400, height: 300, crop: :fill) %>
 
-<div>
+
+
+<div data-controller="search">
   <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <input class="form-control me-2" type="search" id="search" placeholder="Search" aria-label="Search">
+        <ul id="results">
+        </ul>
+  </div>
       <button class="btn btn-outline-success" type="submit">Search</button>
     </form>
 </div>
