@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   def index
     @items = Item.all
+    @items = @items.where(brand: params[:search]) if params[:search].present?
   end
 
   def new

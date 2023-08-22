@@ -18,12 +18,11 @@
 
 
 
-<div data-controller="search">
-  <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" id="search" placeholder="Search" aria-label="Search">
-        <ul id="results">
-        </ul>
-  </div>
+<div>
+  <form action="<%= root_path %>" method="get" class="d-flex" role="search">
+    <input class="form-control me-2" name="search" type="search" id="search" placeholder="Search" aria-label="Search">
+    <ul id="results">
+    </ul>
       <button class="btn btn-outline-success" type="submit">Search</button>
     </form>
 </div>
