@@ -40,16 +40,43 @@
 <div>
   <ul>
     <li>
-      Brand
+      <div class="input-group">
+  <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+    <option selected>Brand</option>
+    <option value="1">Gucci</option>
+    <option value="2">LW</option>
+    <option value="3">Prada</option>
+  </select>
+</div>
     </li>
     <li>
-      Color
+      <div class="input-group">
+  <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+    <option selected>Color</option>
+    <option value="1">Black</option>
+    <option value="2">Brown</option>
+    <option value="3">White</option>
+  </select>
+</div>
     </li>
     <li>
-      size
+      <div class="input-group">
+  <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+    <option selected>Size</option>
+    <option value="1">Small</option>
+    <option value="2">Medium</option>
+    <option value="3">Large</option>
+  </select>
+</div>
     </li>
     <li>
-      price
+      <div>
+
+    <p>price</p>
+    <input type="range" id="priceRange" min="5" max="100" step="1" value="5" oninput="updatePrice(this.value)">
+    <span id="price"> $5 </span>
+  </select>
+</div>
     </li>
   </ul>
 </div>
