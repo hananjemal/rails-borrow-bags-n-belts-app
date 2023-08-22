@@ -1,0 +1,11 @@
+<h2>User Profile</h2>
+
+  <div class="card" style="width: 18rem;">
+  <% @items.each do |item| %>
+  <%# <img <%= cl_image_tag item.photo.key %>
+  <div class="card-body">
+    <h5 class="card-title"><%= item.brand %></h5>
+    <a href="#" class="btn btn-primary"><%= item.description %></a>
+  </div>
+  <% end %>
+</div>
