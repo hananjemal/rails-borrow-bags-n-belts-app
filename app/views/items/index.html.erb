@@ -13,8 +13,7 @@
 
 <h1>Borrow Bags and Belts</h1>
 <p>The world’s largest bags&belts marketplace</p>
-<%= cl_image_tag("Screenshot_2023-08-22_at_12.27.41_fpp3uj",
-      width: 400, height: 300, crop: :fill) %>
+<%= cl_image_tag("Screenshot_2023-08-22_at_12.27.41_fpp3uj") %>
 
 <div>
   <form class="d-flex" role="search">
@@ -54,7 +53,7 @@
 
   <div class="card" style="width: 18rem;">
   <% @items.each do |item| %>
-  <%# <img <%= cl_image_tag item.photo.key %>
+  <img <%= cl_image_tag item.photo.key %>
   <div class="card-body">
     <h5 class="card-title"><%= item.brand %></h5>
     <a href="#" class="btn btn-primary"><%= item.description %></a>
