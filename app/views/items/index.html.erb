@@ -1,1 +1,61 @@
-<h2>home page?</h2>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <i class="fa-solid fa-bars" style="color: #000000;"></i>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <span class="navbar-text"  style="padding-left: 40px;" >
+        Log in / sign up
+      </span>
+    </div>
+  </div>
+</nav>
+
+<h1>Borrow Bags and Belts</h1>
+<p>The world’s largest bags&belts marketplace</p>
+<%= cl_image_tag("Screenshot_2023-08-22_at_12.27.41_fpp3uj",
+      width: 400, height: 300, crop: :fill) %>
+
+<div>
+  <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+</div>
+
+<div>
+  <ul>
+    <li>
+      Bags
+    </li>
+    <li>
+      Belts
+    </li>
+  </ul>
+</div>
+
+<div>
+  <ul>
+    <li>
+      Brand
+    </li>
+    <li>
+      Color
+    </li>
+    <li>
+      size
+    </li>
+    <li>
+      price
+    </li>
+  </ul>
+</div>
+
+
+  <div class="card" style="width: 18rem;">
+  <img <%= cl_image_tag("zara_fabric_shopper_fimwzh") %>
+  <div class="card-body">
+    <h5 class="card-title">Bag name</h5>
+    <a href="#" class="btn btn-primary">Details</a>
+  </div>
+</div>
