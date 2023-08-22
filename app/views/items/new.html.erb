@@ -1,11 +1,24 @@
-<%= simple_form_for(@item) do |f| %>
-  <%= f.input :category %>
-  <%= f.input :brand %>
-  <%= f.input :size %>
-  <%= f.input :color %>
-  <%= f.input :photo, as: :file%>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.input :availability%>
-  <%= f.submit %>
-<% end %>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <i class="fa-solid fa-bars" style="color: #000000;"></i>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <span class="navbar-text"  style="padding-left: 40px;" >
+        Log in / sign up
+      </span>
+    </div>
+  </div>
+</nav>
+
+<h1>Borrow Bags and Belts</h1>
+<p>Add a product</p>
+<div>
+<i class="fa-solid fa-bag-shopping"></i>
+<p>Bag</p>
+</div>
+<div>
+  <i></i>
+  <p>Belt</p>
+</div>
+<%= render "form", item: @item %>
