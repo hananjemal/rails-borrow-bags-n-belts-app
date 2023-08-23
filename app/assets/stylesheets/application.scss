@@ -68,7 +68,7 @@ body {
 
 .search-field {
   width: 480px;
-  height: 43px;
+  height: 73px;
   padding: 10px;
   color: #ffffff;
   background-color: #62A8BB;
@@ -139,6 +139,23 @@ body {
   outline: none;
   border-style: none;
 }
+
+
+h3 {
+  text-decoration: none;
+  color: black
+}
+
+h3:focus {
+  color: #62A8BB;
+}
+
+.active {
+  color: #62A8BB;
+}
+
+.filter {
+  width: auto;
 
 // Horizontal list font style for "Bags, Belts"
 .horizontal-list-container .horizontal-list {

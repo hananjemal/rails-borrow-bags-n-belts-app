@@ -1,7 +1,20 @@
 class ItemsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
+
   def index
     @items = Item.all
+
+    if params[:brand].present?
+      @items = @items.where(brand: params[:brand])
+    end
+
+    if params[:category].present?
+      @items = @items.where(category: params[:category])
+    end
+
+    if params[:query].present?
+      @items = @items.search_by_full_text(params[:query])
+    end
   end
 
   def show
