@@ -1,31 +1,32 @@
-
 <div class="container1">
-<h1>Borrow Bags and Belts</h1>
-<p>The world’s largest bags&belts marketplace</p>
+  <h1>Borrow Bags and Belts</h1>
+  <p>The world’s largest bags&belts marketplace</p>
 
-<%= cl_image_tag("Screenshot_2023-08-22_at_12.27.41_fpp3uj",
+  <%= cl_image_tag("Screenshot_2023-08-22_at_12.27.41_fpp3uj",
       width: 700, height: 600, crop: :auto) %>
 </div>
 
-<div class="search-container">
+<%# <div >
   <input type="text" class="search-field" placeholder="    Search">
   <button class="search-button">🔍</button>
-</div>
-
-<%# <div>
-  <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
 </div> %>
+
+<div class="search-container">
+  <div class="search-field">
+    <%= form_with url: items_path, method: :get, class: "d-flex", style: "" do %>
+      <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "search"%>
+      <%= submit_tag "🔍", name: "", class: "search-button" %>
+    <% end %>
+  </div>
+</div>
 
 <div class="horizontal-list-container">
   <ul class="horizontal-list">
     <li>
-      Bags
+      <%= link_to  "Bag", root_path(category: "bag"), class:"h3 #{params[:category] == 'bag' ? 'active' : ''}" %>
     </li>
     <li>
-      Belts
+      <%= link_to  "Belt", root_path(category: "belt"), class:"h3 #{params[:category] == 'belt' ? 'active' :''}"  %>
     </li>
   </ul>
 </div>
@@ -33,13 +34,19 @@
 <div class="horizontal-list-container">
   <ul class="horizontal-list">
     <li>
-      Brand
+    <%= form_with(url: root_path, method: "get") do |f| %>
+      <%= f.select :brands, options_for_select([["Brand", ""]].concat(Item::BRANDS)), {}, { class: "filter", data: { controller: "tom-select" } } %>
+    <% end %>
     </li>
     <li>
-      Color
+      <%= form_with(url: root_path, method: "get") do |f| %>
+      <%= f.select :dropdown_field, color: Item::COLORS %>
+      <% end %>
     </li>
     <li>
-      Size
+       <%= form_with(url: root_path, method: "get") do |f| %>
+      <%= f.select :dropdown_field, size: Item::SIZE %>
+      <% end %>
     </li>
     <li>
       Price
@@ -47,44 +54,23 @@
   </ul>
 </div>
 
-<div class="product-cards-container">
-  <div class="product-card">
-    <div class="card-image">
-      <%= cl_image_tag("zara_fabric_shopper_fimwzh", width: 250, height: 310, crop: :auto) %>
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">Bag name</h5>
-      <a href="#" class="btn btn-primary">Rent</a>
-    </div>
-  </div>
 
-   <div class="product-card">
-    <div class="card-image">
-      <%= cl_image_tag("zara_fabric_shopper_fimwzh", width: 250, height: 310, crop: :auto) %>
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">Bag name</h5>
-      <a href="#" class="btn btn-primary">Rent</a>
-    </div>
-  </div>
-
-   <div class="product-card">
-    <div class="card-image">
-      <%= cl_image_tag("zara_fabric_shopper_fimwzh", width: 250, height: 310, crop: :auto) %>
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">Bag name</h5>
-      <a href="#" class="btn btn-primary">Rent</a>
-    </div>
-  </div>
-
-   <div class="product-card">
-    <div class="card-image">
-      <%= cl_image_tag("zara_fabric_shopper_fimwzh", width: 250, height: 310, crop: :auto) %>
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">Bag name</h5>
-      <a href="#" class="btn btn-primary">Rent</a>
-    </div>
-  </div>
+<div id="items" class="d-flex justify-content-evenly gap-0">
+  <% if @items.any? %>
+    <% @items.each do |item| %>
+      <div class="product-cards-container">
+        <div class="product-card">
+          <div class="card-image">
+            <%= cl_image_tag(item.picture_url, width: 250, height: 310, crop: :auto) %>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"><%= item.brand %></h5>
+            <%= link_to "Rent", item_path(item), class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+      <% end %>
+  <% else %>
+    <em>Sorry, no items found.</em>
+  <% end %>
 </div>
