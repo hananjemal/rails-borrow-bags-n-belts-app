@@ -2,15 +2,15 @@
   <h1>Borrow Bags and Belts</h1>
   <p>The world’s largest bags&belts marketplace</p>
 
-  <%= cl_image_tag("Screenshot_2023-08-22_at_12.27.41_fpp3uj",
+  <%= cl_image_tag("https://res.cloudinary.com/ddicha2gs/image/upload/v1692680623/banelciaga_WOMEN_S_CRUSH_LARGE_SLING_BAG_IN_BLACK_whadff.jpg",
       width: 700, height: 600, crop: :auto) %>
 </div>
 
 
 <div class="search-container">
-  <div class="search-field">
+  <div clas="border border-light">
     <%= form_with url: items_path, method: :get, class: "d-flex", style: "" do %>
-      <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "search"%>
+      <%= text_field_tag :query, params[:query], class: "form-control border border-light-subtle", placeholder: "search"%>
       <%= submit_tag "🔍", name: "", class: "search-button" %>
     <% end %>
   </div>
@@ -58,7 +58,7 @@
       <div class="product-cards-container">
         <div class="product-card">
           <div class="card-image">
-            <%= cl_image_tag(item.picture_url, width: 250, height: 310, crop: :auto) %>
+            <%= image_tag(item.picture_url, width: 250, height: 310, crop: :auto) %>
           </div>
           <div class="card-body">
             <h5 class="card-title"><%= item.brand %></h5>
