@@ -1,0 +1,49 @@
+
+
+<h1 style="display:felx; justify-content: center">Add new Booking For <%= @item.name %></h1>
+
+<%# show all the info of the bag %>
+
+<div style="display: flex;justify-content: space-evenly">
+<div style= "width:410px; margin: 20px; padding:30px;">
+<%= cl_image_tag("zara_fabric_shopper_fimwzh", width: 350, height: 410, crop: :auto) %>
+<div style="display:flex; justify-content: space-between; margin-top: 10px;">
+<%= cl_image_tag("zara_fabric_shopper_fimwzh", width: 100, height: 120, crop: :auto) %>
+<%= cl_image_tag("zara_fabric_shopper_fimwzh", width: 100, height: 120, crop: :auto) %>
+<%= cl_image_tag("zara_fabric_shopper_fimwzh", width: 100, height: 120, crop: :auto) %>
+</div>
+</div>
+
+<div style= "width:210px; margin: 20px; padding:30px;">
+<ul>
+<li>Brand</li>
+<li>Size</li>
+<li>Color</li>
+<li>Description</li>
+<li>Price/day</li>
+<li>Availability</li>
+</ul>
+</div>
+
+<div style= "width:210px; margin: 20px; padding:30px;">
+<ul>
+<li><%= @item.brand%></li>
+<li><%= @item.size%></li>
+<li><%= @item.color%></li>
+<li><%= @item.description%></li>
+<li><%= @item.price%></li>
+<li><%= @item.availability%></li>
+</ul>
+</div>
+
+
+
+<div style= "width:310px; margin: 20px; padding:30px;">
+<%= simple_form_for [@item, @booking] do |f| %>
+   <%= f.input :from, as: :string, input_html: { data: { controller: "datepicker" } } %>
+  <%= f.input :to, as: :string, input_html: { data: { controller: "datepicker" } } %>
+  <%= f.submit "Book", class: "btn btn-secondary" %>
+<% end %>
+</div>
+
+</div>
