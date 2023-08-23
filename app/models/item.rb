@@ -7,4 +7,5 @@ class Item < ApplicationRecord
   pg_search_scope :search_by_full_text, against: [ :brand, :category, :color, :size, :price ], using: {
     tsearch: { prefix: true }
   }
+  has_many :bookings
 end

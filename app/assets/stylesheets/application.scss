@@ -10,6 +10,7 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import 'pages/log_in';
 
 .custom-navbar {
   display: flex;
@@ -62,7 +63,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 32px;
+  // margin-top: 32px;
 }
 
 .search-field {
@@ -139,6 +140,7 @@ body {
   border-style: none;
 }
 
+
 h3 {
   text-decoration: none;
   color: black
@@ -154,4 +156,19 @@ h3:focus {
 
 .filter {
   width: auto;
+
+// Horizontal list font style for "Bags, Belts"
+.horizontal-list-container .horizontal-list {
+  list-style: none;
+  padding: 0;}
+
+.horizontal-list-container .horizontal-list li {
+  color: #000;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.6px;
 }

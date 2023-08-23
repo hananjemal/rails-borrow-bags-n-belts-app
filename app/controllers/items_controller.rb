@@ -17,6 +17,11 @@ class ItemsController < ApplicationController
     end
   end
 
+  def show
+    @item = Item.find(params[:id])
+    @booking = Booking.new
+  end
+
   def new
     @item = Item.new
   end
