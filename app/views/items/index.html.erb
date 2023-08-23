@@ -1,30 +1,33 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <i class="fa-solid fa-bars" style="color: #000000;"></i>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-      <span class="navbar-text"  style="padding-left: 40px;" >
-        Log in / sign up
-      </span>
-    </div>
+<div class="custom-navbar">
+  <div class="logo">
+    <!-- Add image with the logo here -->
   </div>
-</nav>
+  <div class="login-signup">
+    Log in / Sign up
+  </div>
+</div>
 
+<div class="container1">
 <h1>Borrow Bags and Belts</h1>
 <p>The world’s largest bags&belts marketplace</p>
 <%= cl_image_tag("Screenshot_2023-08-22_at_12.27.41_fpp3uj",
-      width: 400, height: 300, crop: :fill) %>
+      width: 700, height: 600, crop: :auto) %>
+</div>
 
-<div>
+<div class="search-container">
+  <input type="text" class="search-field" placeholder="    Search">
+  <button class="search-button">🔍</button>
+</div>
+
+<%# <div>
   <form class="d-flex" role="search">
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success" type="submit">Search</button>
     </form>
-</div>
+</div> %>
 
-<div>
-  <ul>
+<div class="horizontal-list-container">
+  <ul class="horizontal-list">
     <li>
       Bags
     </li>
@@ -34,8 +37,8 @@
   </ul>
 </div>
 
-<div>
-  <ul>
+<div class="horizontal-list-container">
+  <ul class="horizontal-list">
     <li>
       Brand
     </li>
@@ -43,19 +46,64 @@
       Color
     </li>
     <li>
-      size
+      Size
     </li>
     <li>
-      price
+      Price
     </li>
   </ul>
 </div>
 
 
-  <div class="card" style="width: 18rem;">
+<div class="product-cards-container">
+  <div class="product-card">
+    <div class="card-image">
+      <%= cl_image_tag("zara_fabric_shopper_fimwzh", width: 250, height: 310, crop: :auto) %>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Bag name</h5>
+      <a href="#" class="btn btn-primary">Rent</a>
+    </div>
+  </div>
+
+   <div class="product-card">
+    <div class="card-image">
+      <%= cl_image_tag("zara_fabric_shopper_fimwzh", width: 250, height: 310, crop: :auto) %>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Bag name</h5>
+      <a href="#" class="btn btn-primary">Rent</a>
+    </div>
+  </div>
+
+   <div class="product-card">
+    <div class="card-image">
+      <%= cl_image_tag("zara_fabric_shopper_fimwzh", width: 250, height: 310, crop: :auto) %>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Bag name</h5>
+      <a href="#" class="btn btn-primary">Rent</a>
+    </div>
+  </div>
+
+   <div class="product-card">
+    <div class="card-image">
+      <%= cl_image_tag("zara_fabric_shopper_fimwzh", width: 250, height: 310, crop: :auto) %>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Bag name</h5>
+      <a href="#" class="btn btn-primary">Rent</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <%# <div class="card" style="width: 18rem;">
   <img <%= cl_image_tag("zara_fabric_shopper_fimwzh") %>
-  <div class="card-body">
+  <%# <div class="card-body">
     <h5 class="card-title">Bag name</h5>
     <a href="#" class="btn btn-primary">Details</a>
   </div>
-</div>
+</div> %>

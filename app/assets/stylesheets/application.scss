@@ -10,3 +10,131 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.custom-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+}
+
+// .logo {
+// Width:
+// Height:
+// }
+
+body {
+  background-color: #ffffff;
+  }
+
+.login-signup {
+  padding-left: 40px;
+  font-weight: medium;
+}
+
+.container1 {
+  text-align: center;
+  margin-top: 100px;
+  width: 100%;
+  background-color: white;
+}
+
+.horizontal-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 52px;
+}
+
+.horizontal-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.horizontal-list li {
+  margin: 0 32px; /* Spacing between categories */
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.search-field {
+  width: 480px;
+  height: 43px;
+  padding: 10px;
+  color: #ffffff;
+  background-color: #62A8BB;
+  border-radius: 42px 0 0 42px;
+  outline: none;
+  border-style: none;
+}
+
+.search-button {
+  padding: 10px 20px;
+  background-color: #62A8BB;
+  color: #ffffff;
+  border: none;
+  border-radius: 0 42px 42px 0;
+  cursor: pointer;
+  outline: none;
+}
+
+::placeholder {
+  color: white;
+}
+
+// Product card //
+
+.product-cards-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 150px 20px;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-right: 20px; // custom spacing between product cards
+}
+
+.card-image {
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-body {
+  padding: 25px;
+}
+
+.card-title {
+  margin-top: px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 5px 10px;
+  background-color: #62A8BB;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 42px;
+  outline: none;
+  border-style: none;
+}
