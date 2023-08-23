@@ -97,7 +97,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 150px 20px;
+  margin:  150px 20px;
 }
 
 .product-card {
@@ -138,9 +138,12 @@ body {
   border-radius: 42px;
   outline: none;
   border-style: none;
+  margin-left: 150px;
 }
 
-
+p-text {
+  margin: 40px;
+}
 h3 {
   text-decoration: none;
   color: black
