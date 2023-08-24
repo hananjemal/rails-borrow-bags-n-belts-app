@@ -1,11 +1,29 @@
 <h2>User Profile</h2>
 
+<h3>Your Listed Items</h3>
   <div class="card" style="width: 18rem;">
   <% @items.each do |item| %>
   <%# <img <%= cl_image_tag item.photo.key %>
   <div class="card-body">
     <h5 class="card-title"><%= item.brand %></h5>
-    <a href="#" class="btn btn-primary"><%= item.description %></a>
+    <%= item.description %></a>
+  <%= link_to "Edit Rental", edit_item_path(item) %>
+  <%= link_to "Delete Rental", item_path(item), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
   </div>
+  <%= item.price %>
   <% end %>
 </div>
+
+<%= link_to "New Rental", new_item_path %>
+
+<h3>Your Rented Selection</h3>
+
+<% @bookings.each do |booking| %>
+<%= booking.from %><%= booking.to %>
+<%= booking.item.category %>
+<%= booking.item.name%>
+<%= booking.item.brand %>
+<p>total price: <%=booking.rental_duration * booking.item.price%></p>
+<%= link_to "Delete booking", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+
+<% end %>
