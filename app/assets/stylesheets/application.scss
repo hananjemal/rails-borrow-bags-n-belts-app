@@ -10,7 +10,8 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-@import 'pages/log_in';
+@import "pages/log_in";
+@import "pages/product_p.scss";
 
 .custom-navbar {
   display: flex;

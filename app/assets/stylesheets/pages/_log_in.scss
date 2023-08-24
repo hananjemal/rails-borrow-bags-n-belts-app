@@ -19,7 +19,6 @@
 .form-container {
   width: 624px;
   height: 400px;
-  flex-shrink: 0;
   border-radius: 25px;
   background: rgba(255, 255, 255, 0.62);
   backdrop-filter: blur(7px);
@@ -85,11 +84,12 @@
   border-radius: 25px;
   border: 1px solid #62A8BB;
   background: #62A8BB;
+  color: white;
   position: relative;
 }
 
 .custom-button span {
-  color: #FFF;
+  color: #383843;
   text-align: center;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 28px;

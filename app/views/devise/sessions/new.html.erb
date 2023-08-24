@@ -9,21 +9,23 @@
     </div>
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="form-inputs">
-        <div class="form-field">
+        <div>
           <%= f.input :email,
+                      label: "Email",
+                      placeholder: "email@text.com",
                       required: false,
                       autofocus: true,
-                      input_html: { autocomplete: "email" } %>
+                      input_html: { autocomplete: "email", class: "form-field" } %>
         </div>
-        <div class="form-field">
+        <div>
           <%= f.input :password,
                       required: false,
-                      input_html: { autocomplete: "current-password" } %>
+                      input_html: { autocomplete: "current-password", class: "form-field" } %>
         </div>
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
       <div class="form-actions">
-        <%= f.button :submit, "Log in", class: "custom-button" %>
+  <%= f.button :submit, "Log in", class: "custom-button" %>
       </div>
 
     <% end %>
