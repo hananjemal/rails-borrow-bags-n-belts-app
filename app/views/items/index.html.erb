@@ -9,11 +9,13 @@
   </div>
 </div>
 
-<div class="search-container" style="padding-top: 20px;">
-  <div clas="border border-light">
+<div class="search-container" style="padding-top: 35px;">
+  <div class="border border-light">
     <%= form_with url: items_path, method: :get, class: "d-flex", style: "width: 700px;" do %>
-      <%= text_field_tag :query, params[:query], class: "form-control border border-light-subtle", placeholder: "search"%>
-      <%= submit_tag "🔍", name: "", class: "search-button" %>
+      <%= text_field_tag :query, params[:query], class: "search-field", placeholder: "search"%>
+      <button type="submit" class="search-button">
+        <i class="fas fa-search"></i>
+      </button>
     <% end %>
   </div>
 </div>
