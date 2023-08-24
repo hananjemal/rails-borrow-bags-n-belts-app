@@ -1,15 +1,16 @@
-<div class="container1">
-  <h1>Borrow Bags and Belts</h1>
-  <p>The world’s largest bags&belts marketplace</p>
-
-  <%= cl_image_tag("https://res.cloudinary.com/ddicha2gs/image/upload/v1692680623/banelciaga_WOMEN_S_CRUSH_LARGE_SLING_BAG_IN_BLACK_whadff.jpg",
-      width: 700, height: 600, crop: :auto) %>
+<div class="py-0">
+<div class="px-5" style="background-repeat: no-repeat; background-size: cover; background-position: center center; height: 500px; background-image: url(<%= cl_image_path('https://res.cloudinary.com/ddicha2gs/image/upload/v1692848961/Women_Fashion_Bag_5_gyvija.jpg') %>);">
+  <div style="padding-top: 120px; padding-left: 60px;">
+    <h1>Woman fasion Bags & Belts</h1>
+    <p style="padding-top: 30px; margin-bottom; 5px;">The world’s largest bags&belts borrowplace</p>
+    <p>Style Sharing Community: Borrow Bags and Belts with Confidence!</p>
+    <%= link_to "Start now!", profile_path, class: "start-btn" %>
+  </div>
 </div>
 
-
-<div class="search-container">
+<div class="search-container" style="padding-top: 20px;">
   <div clas="border border-light">
-    <%= form_with url: items_path, method: :get, class: "d-flex", style: "" do %>
+    <%= form_with url: items_path, method: :get, class: "d-flex", style: "width: 700px;" do %>
       <%= text_field_tag :query, params[:query], class: "form-control border border-light-subtle", placeholder: "search"%>
       <%= submit_tag "🔍", name: "", class: "search-button" %>
     <% end %>
@@ -27,42 +28,44 @@
   </ul>
 </div>
 
-<div class="horizontal-list-container">
+<%# <div class="horizontal-list-container">
   <ul class="horizontal-list">
     <li>
     <%= form_with(url: root_path, method: "get") do |f| %>
-      <%= f.select :brands, options_for_select([["Brand", ""]].concat(Item::BRANDS)), {}, { class: "filter", data: { controller: "tom-select" } } %>
-    <% end %>
-    </li>
-    <li>
-      <%= form_with(url: root_path, method: "get") do |f| %>
-      <%= f.select :dropdown_field, color: Item::COLORS %>
-      <% end %>
-    </li>
+      <%# <%= f.select :brands, options_for_select([["Brand", ""]].concat(Item::BRANDS)), {}, { class: "filter", data: { controller: "tom-select" } } %>
+    <%# <% end %>
+    <%# </li>
+    <%# <li> %>
+      <%# <%= form_with(url: root_path, method: "get") do |f| %>
+      <%# <%= f.select :dropdown_field, color: Item::COLORS %>
+      <%# <% end %>
+    <%# </li>
     <li>
        <%= form_with(url: root_path, method: "get") do |f| %>
-      <%= f.select :dropdown_field, size: Item::SIZE %>
-      <% end %>
-    </li>
-    <li>
-      Price
+      <%# <%= f.select :dropdown_field, size: Item::SIZE %>
+      <%# <% end %>
+    <%# </li> %>
+    <%# <li> %>
+      <%# Price
     </li>
   </ul>
-</div>
+</div> %>
 
 
-
-<div id="items" class="d-flex justify-content-evenly gap-0">
+<div id="items" class="d-flex flex-wrap justify-content-start" style="padding: 60px;">
   <% if @items.any? %>
     <% @items.each do |item| %>
       <div class="product-cards-container">
         <div class="product-card">
           <div class="card-image">
-            <%= image_tag(item.picture_url, width: 250, height: 310, crop: :auto) %>
+            <%= image_tag(item.picture_url, width: 300, height: 300, crop: :auto) %>
           </div>
           <div class="card-body">
             <h5 class="card-title"><%= item.brand %></h5>
-            <%= link_to "Rent", item_path(item), class: "btn btn-primary" %>
+            <div class="d-flex">
+              <p class="p-text"><%= item.price %>$/day</p>
+              <%= link_to "Rent", item_path(item), class: "btn btn-primary" %>
+            </div>
           </div>
         </div>
       </div>
