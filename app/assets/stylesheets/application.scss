@@ -14,6 +14,13 @@
 @import "pages/product_p";
 @import "pages/user_profile";
 
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+
 
 .horizontal-list-container {
   display: flex;
@@ -41,9 +48,11 @@
 }
 
 .search-field {
+
   width: 480px;
   height: 45px;
   flex-shrink: 0;
+
   padding: 10px;
   color: #ffffff;
   background-color: #62A8BB;
@@ -73,6 +82,7 @@
   justify-content: space-around;
   align-items: center;
   margin:  16px 20px;
+  // width: 280px;
 
 }
 
@@ -118,6 +128,10 @@
   outline: none;
   border-style: none;
   margin-left: 100px;
+}
+.btn:hover {
+  background-color: #1d7d97;
+  color: white;
 }
 
 .p-text {

@@ -5,22 +5,55 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
 puts "Cleaning database..."
 Booking.destroy_all
 Item.destroy_all
 
-items = Item.create(category: "belt", brand: "gucci", size: "M", color: "black", description: "90% brand new", price: 50, picture_url: "https://media.istockphoto.com/id/492845800/photo/black-belt.webp?b=1&s=170667a&w=0&k=20&c=zRgabxSREm66MUGU6iP41JZkJPrGWhrnRSbTEc4nOMo=", availability: true)
-items = Item.create(category: "bag", brand: "chanel", size: "L", color: "pink", description: "50% brand new", price: 60, picture_url: "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmFnfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60", availability: true)
-items = Item.create(category: "belt", brand: "chanel", size: "L", color: "pink", description: "50% brand new", price: 50, picture_url: "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmFnfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60", availability: true)
-items = Item.create(category: "bag", brand: "chanel", size: "L", color: "pink", description: "50% brand new", price: 10, picture_url: "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmFnfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60", availability: true)
-items = Item.create(category: "belt", brand: "chanel", size: "S", color: "pink", description: "50% brand new", price: 50, picture_url: "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmFnfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60", availability: true)
-items = Item.create(category: "bag", brand: "chanel", size: "S", color: "pink", description: "50% brand new", price: 50, picture_url: "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmFnfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60", availability: true)
-items = Item.create(category: "bag", brand: "chanel", size: "L", color: "pink", description: "50% brand new", price: 55, picture_url: "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmFnfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60", availability: true)
-items = Item.create(category: "bag", brand: "chanel", size: "S", color: "pink", description: "50% brand new", price: 70, picture_url: "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmFnfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60", availability: true)
-items = Item.create(category: "belt", brand: "gucci", size: "M", color: "black", description: "90% brand new", price: 10, picture_url: "https://media.istockphoto.com/id/492845800/photo/black-belt.webp?b=1&s=170667a&w=0&k=20&c=zRgabxSREm66MUGU6iP41JZkJPrGWhrnRSbTEc4nOMo=", availability: true)
-items = Item.create(category: "bag", brand: "chanel", size: "S", color: "pink", description: "50% brand new", price: 50, picture_url: "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmFnfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60", availability: true)
-items = Item.create(category: "belt", brand: "chanel", size: "S", color: "pink", description: "50% brand new", price: 25, picture_url: "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmFnfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60", availability: true)
-items = Item.create(category: "bag", brand: "chanel", size: "S", color: "pink", description: "50% brand new", price: 30, picture_url: "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmFnfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60", availability: true)
-items = Item.create(category: "belt", brand: "chanel", size: "S", color: "pink", description: "50% brand new", price: 20, picture_url: "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmFnfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60", availability: true)
+require "open-uri"
+file = URI.open("https://res.cloudinary.com/ddicha2gs/image/upload/v1692680910/Mango_Saffiano-effect_small_shopper_bag_ehquai.png")
+items = Item.new(category: "belt", brand: "gucci", size: "M", color: "black", description: "90% brand new", price: 50, availability: true)
+items.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+items.save
+
+file = URI.open("https://res.cloudinary.com/ddicha2gs/image/upload/v1692680913/zara_fabric_shopper_fimwzh.jpg")
+items = Item.new(category: "bag", brand: "Channel", size: "M", color: "blue", description: "90% brand new", price: 40, availability: true)
+items.photo.attach(io: file, filename: "nes1.png", content_type: "image/png")
+items.save
+
+file = URI.open("https://res.cloudinary.com/ddicha2gs/image/upload/v1692680903/OPHIDIA_GG_LARGE_TOTE_BAG_fczzbt.png")
+items = Item.new(category: "bag", brand: "Louis Vuitton", size: "L", color: "brown", description: "Little old", price: 35, availability: true)
+items.photo.attach(io: file, filename: "nes2.png", content_type: "image/png")
+items.save
+
+file = URI.open("https://res.cloudinary.com/ddicha2gs/image/upload/v1692680901/Versace_Medusa-buckle_belt_ud2fig.webp")
+items = Item.new(category: "belt", brand: "Prada", size: "M", color: "black", description: "never used", price: 15, availability: true)
+items.photo.attach(io: file, filename: "nes3.png", content_type: "image/png")
+items.save
+
+file = URI.open("https://res.cloudinary.com/ddicha2gs/image/upload/v1692680902/background_diana-light-nvQemFKRBUo-unsplash.jpg.crdownload_gfj5c1.jpg")
+items = Item.new(category: "bag", brand: "Hermès", size: "S", color: "blue", description: "90% brand new", price: 58, availability: true)
+items.photo.attach(io: file, filename: "nes4.png", content_type: "image/png")
+items.save
+
+file = URI.open("https://res.cloudinary.com/ddicha2gs/image/upload/v1692680900/Vanzetti_ggbp7o.webp")
+items = Item.new(category: "belt", brand: "Michael Kors", size: "S", color: "brown", description: "90% brand new", price: 20, availability: true)
+items.photo.attach(io: file, filename: "nes5.png", content_type: "image/png")
+items.save
+
+file = URI.open("https://res.cloudinary.com/ddicha2gs/image/upload/v1692680898/IsabelMarant_lecce_leather_belt_lyvjey.webp")
+items = Item.new(category: "belt", brand: "Gucci", size: "L", color: "red", description: "90% brand new", price: 25, availability: true)
+items.photo.attach(io: file, filename: "nes6.png", content_type: "image/png")
+items.save
+
+file = URI.open("https://res.cloudinary.com/ddicha2gs/image/upload/v1692680868/chanel_22_mini_handbag_pcgfc1.webp")
+items = Item.new(category: "bag", brand: "Chanel", size: "M", color: "white", description: "90% brand new", price: 150, availability: true)
+items.photo.attach(io: file, filename: "nes7.png", content_type: "image/png")
+items.save
+
+file = URI.open("https://res.cloudinary.com/ddicha2gs/image/upload/v1692680868/chanel_22_mini_handbag_pcgfc1.webp")
+items = Item.new(category: "bag", brand: "Chanel", size: "M", color: "white", description: "90% brand new", price: 150, availability: true)
+items.photo.attach(io: file, filename: "nes7.png", content_type: "image/png")
+items.save
 
 puts "items created"

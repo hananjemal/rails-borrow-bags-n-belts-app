@@ -30,7 +30,27 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     @item.save
     # No need for app/views/restaurants/create.html.erb
-    redirect_to items_path
+    if @item.save
+      redirect_to items_path
+    else
+      render "items/new", status: :unprocessable_entity
+    end
+  end
+
+  def edit
+    @item = Item.find(params[:id])
+  end
+
+  def update
+    @item = Item.find(params[:id])
+    @item.update(item_params) # Will raise ActiveModel::ForbiddenAttributesError
+    redirect_to profile_path
+  end
+
+  def destroy
+    @item = Item.find(params[:id])
+    @item.destroy
+    redirect_to profile_path
   end
 
   def edit

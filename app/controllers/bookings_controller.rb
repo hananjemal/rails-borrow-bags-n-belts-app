@@ -1,16 +1,24 @@
 class BookingsController < ApplicationController
   def create
-      @item = Item.find(params[:item_id])
-      @booking = Booking.new(booking_params)
-      @booking.item = @item
-      @booking.user = current_user
-      # @movie = Movie.find(params[:bookmark][:movie])
+    @item = Item.find(params[:item_id])
+    @booking = Booking.new(booking_params)
+    @booking.item = @item
+    @booking.user = current_user
+    respond_to do |format|
       if @booking.save
-        redirect_to root_path
+        format.html { redirect_to items_path}
+        format.json # Follows the classic Rails flow and look for a create.json view
       else
-        puts @booking.errors.messages
-        render "items/show", status: :unprocessable_entity
+        format.html { render "items/show", status: :unprocessable_entity }
+        format.json # Follows the classic Rails flow and look for a create.json view
       end
+    end
+  end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to profile_path
   end
 
   def destroy

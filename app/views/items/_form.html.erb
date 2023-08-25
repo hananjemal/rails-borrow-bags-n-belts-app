@@ -1,12 +1,24 @@
 <%= simple_form_for(@item) do |f| %>
-  <%= f.input :category %>
-  <%= f.input :name %>
-  <%= f.input :brand %>
-  <%= f.input :size %>
-  <%= f.input :color %>
-  <%= f.input :photo, as: :file%>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.input :availability%>
-  <%= f.submit %>
+
+
+  <%= f.input :category, collection: Item::CATEGORY, prompt: "Select your category",
+    placeholder: "example@email.com",
+    input_html: { class: "form-field2" } %>
+  <%= f.input :name,
+      input_html: { class: "form-field2" }  %>
+  <%= f.input :brand, collection: Item::BRANDS, prompt: "Select your brands",
+      input_html: { class: "form-field2" }  %>
+  <%= f.input :size, collection: Item::SIZE, prompt: "Select your size",
+      input_html: { class: "form-field2" } %>
+  <%= f.input :color, collection: Item::COLORS, prompt: "Select your color",
+      input_html: { class: "form-field2" }  %>
+  <%= f.input :photo, as: :file,
+      input_html: { class: "form-field2" } %>
+  <%= f.input :description,
+      input_html: { class: "form-field2" }  %>
+  <%= f.input :price,
+      input_html: { class: "form-field2" } %>
+  <%= f.input :availability %>
+  <%= f.button :button, "Add item", style: "border: 1px solid #62A8BB; border-radius: 42px;" %>
+
 <% end %>

@@ -1,13 +1,14 @@
 
 <div class="py-0">
-<div class="px-5" style="background-repeat: no-repeat; background-size: cover; background-position: center center; height: 500px; background-image: url(<%= cl_image_path('https://res.cloudinary.com/ddicha2gs/image/upload/v1692848961/Women_Fashion_Bag_5_gyvija.jpg') %>);">
+<div class="px-5" style="background-repeat: no-repeat; background-size: cover; background-position: center center; height: 500px; background-image: url('https://res.cloudinary.com/ddicha2gs/image/upload/v1692848961/Women_Fashion_Bag_5_gyvija.jpg');">
   <div style="padding-top: 120px; padding-left: 60px;">
     <h1>Woman fasion Bags & Belts</h1>
     <p style="padding-top: 30px; margin-bottom; 5px;">The world’s largest bags&belts borrowplace</p>
     <p>Style Sharing Community: Borrow Bags and Belts with Confidence!</p>
-    <%= link_to "Start now!", profile_path, class: "start-btn" %>
+    <%= link_to "Start now!", profile_path, class: "btn start-btn" %>
   </div>
 </div>
+
 
 <div class="search-container" style="padding-top: 35px;">
   <div class="border border-light">
@@ -16,6 +17,7 @@
       <button type="submit" class="search-button">
         <i class="fas fa-search"></i>
       </button>
+
     <% end %>
   </div>
 </div>
@@ -55,13 +57,15 @@
 </div> %>
 
 
-<div id="items" class="d-flex flex-wrap justify-content-start" style="padding: 60px;">
+<div id="items" class="grid" style="padding: 60px;">
   <% if @items.any? %>
     <% @items.each do |item| %>
       <div class="product-cards-container">
         <div class="product-card">
           <div class="card-image">
-            <%= cl_image_tag(item.picture_url, width: 300, height: 300, crop: :auto) %>
+
+            <%= cl_image_tag item.photo.key, width: 298, height: 300, crop: :auto %>
+
           </div>
           <div class="card-body">
             <h5 class="card-title"><%= item.brand %></h5>
