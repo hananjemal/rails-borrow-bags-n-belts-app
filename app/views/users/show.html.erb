@@ -49,17 +49,3 @@
 
 
 </div>
-
-<%= link_to "New Rental", new_item_path %>
-
-<h3>Your Rented Selection</h3>
-
-<% @bookings.each do |booking| %>
-<%= booking.from %><%= booking.to %>
-<%= booking.item.category %>
-<%= booking.item.name%>
-<%= booking.item.brand %>
-<p>total price: <%=booking.rental_duration * booking.item.price%></p>
-<%= link_to "Delete booking", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-
-<% end %>

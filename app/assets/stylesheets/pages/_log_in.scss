@@ -13,12 +13,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 400px;
+  height: 500px;
 }
 
 .form-container {
   width: 624px;
-  height: 650px;
+  height: 550px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.62);
+  backdrop-filter: blur(7px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.form-container-su {
+  width: 624px;
+  height: 850px;
   border-radius: 25px;
   background: rgba(255, 255, 255, 0.62);
   backdrop-filter: blur(7px);
