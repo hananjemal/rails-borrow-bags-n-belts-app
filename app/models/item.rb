@@ -8,4 +8,5 @@ class Item < ApplicationRecord
     tsearch: { prefix: true }
   }
   has_many :bookings, dependent: :destroy
+  validates :brand, :category, :name, :color, :size, :price, :photo, :description, presence: true
 end

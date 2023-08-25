@@ -30,7 +30,11 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     @item.save
     # No need for app/views/restaurants/create.html.erb
-    redirect_to items_path
+    if @item.save
+      redirect_to items_path
+    else
+      render "items/new", status: :unprocessable_entity
+    end
   end
 
   def edit
