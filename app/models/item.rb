@@ -10,6 +10,8 @@ class Item < ApplicationRecord
   }
   has_many :bookings, dependent: :destroy
 
+
   validates :brand, :category, :name, :color, :size, :price, :photo, :description, presence: true
+
 
 end

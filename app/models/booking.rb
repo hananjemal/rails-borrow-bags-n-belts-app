@@ -5,9 +5,11 @@ class Booking < ApplicationRecord
   belongs_to :item
 
 
+
   def rental_duration
     (to - from).to_i + 1
   end
+
 
   validates :from, presence: true
   validates :to, presence: true
@@ -41,5 +43,4 @@ class Booking < ApplicationRecord
   def release_item_availability
     item.update(availability: true)
   end
-
 end
