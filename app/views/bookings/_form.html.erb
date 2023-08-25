@@ -1,5 +1,9 @@
 <%= simple_form_for [item, booking], data: {sweetalert2_target: "form", action: "submit->sweetalert2#send"} do |f| %>
-  <%= f.input :from, as: :string, input_html: { data: { controller: "datepicker" } } %>
-  <%= f.input :to, as: :string, input_html: { data: { controller: "datepicker" } } %>
+  <div data-controller="price" data-price-day-price-value="<%= item.price %>">
+    <%= f.input :from, as: :string, input_html: { data: { controller: "datepicker", price_target: "from", action: "change->price#calculateTotalPrice" } } %>
+    <%= f.input :to, as: :string, input_html: { data: { controller: "datepicker", price_target: "to", action: "change->price#calculateTotalPrice"} } %>
+    <h2 class="header3" style="text-align: right;" >Price <%= item.price %>$/day</h2>
+    <h2 class="header3" style="text-align: right;" ><span data-price-target="totalPrice"></span></h2>
+  </div>
   <%= f.submit "Book", class: "btn btn-secondary" %>
 <% end %>
