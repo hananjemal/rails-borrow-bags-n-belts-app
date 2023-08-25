@@ -1,0 +1,5 @@
+<%= simple_form_for [item, booking], data: {sweetalert2_target: "form", action: "submit->sweetalert2#send"} do |f| %>
+  <%= f.input :from, as: :string, input_html: { data: { controller: "datepicker" } } %>
+  <%= f.input :to, as: :string, input_html: { data: { controller: "datepicker" } } %>
+  <%= f.submit "Book", class: "btn btn-secondary" %>
+<% end %>

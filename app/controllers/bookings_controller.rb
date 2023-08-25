@@ -5,11 +5,14 @@ class BookingsController < ApplicationController
       @booking.item = @item
       @booking.user = current_user
       # @movie = Movie.find(params[:bookmark][:movie])
-      if @booking.save
-        redirect_to root_path
-      else
-        puts @booking.errors.messages
-        render "items/show", status: :unprocessable_entity
+      respond_to do |format|
+        if @booking.save
+          format.html { redirect_to items_path}
+          format.json # Follows the classic Rails flow and look for a create.json view
+        else
+          format.html { render "items/show", status: :unprocessable_entity }
+          format.json # Follows the classic Rails flow and look for a create.json view
+        end
       end
   end
 
