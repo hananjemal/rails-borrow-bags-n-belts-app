@@ -1,48 +1,45 @@
-
-
-<h1 style="display:felx; justify-content: center">Add new Booking For <%= @item.name %></h1>
-
-<%# show all the info of the bag %>
+<h1 class="header2">Add new Booking For <%= @item.name %></h1>
 
 <div style="display: flex;justify-content: space-evenly">
+<div style= "width:410px; margin: 30px; padding:30px;">
+<%= cl_image_tag("zara_fabric_shopper_fimwzh", width: 350, height: 410, crop: :auto) %>
+</div>
+
+<%# <div style="display: flex;justify-content: space-evenly">
 <div style= "width:410px; margin: 20px; padding:30px;">
 <%= cl_image_tag("zara_fabric_shopper_fimwzh", width: 350, height: 410, crop: :auto) %>
-<div style="display:flex; justify-content: space-between; margin-top: 10px;">
-<%= cl_image_tag("zara_fabric_shopper_fimwzh", width: 100, height: 120, crop: :auto) %>
-<%= cl_image_tag("zara_fabric_shopper_fimwzh", width: 100, height: 120, crop: :auto) %>
-<%= cl_image_tag("zara_fabric_shopper_fimwzh", width: 100, height: 120, crop: :auto) %>
-</div>
-</div>
+<%# <div style="display:flex; justify-content: space-between; margin-top: 10px;">
+<%# <%= cl_image_tag("zara_fabric_shopper_fimwzh", width: 100, height: 120, crop: :auto) %>
+<%# <%= cl_image_tag("zara_fabric_shopper_fimwzh", width: 100, height: 120, crop: :auto) %>
+<%# <%= cl_image_tag("zara_fabric_shopper_fimwzh", width: 100, height: 120, crop: :auto) %>
 
-<div style= "width:210px; margin: 20px; padding:30px;">
-<ul>
-<li>Brand</li>
-<li>Size</li>
-<li>Color</li>
-<li>Description</li>
-<li>Price/day</li>
-<li>Availability</li>
-</ul>
-</div>
-
-<div style= "width:210px; margin: 20px; padding:30px;">
-<ul>
-<li><%= @item.brand%></li>
-<li><%= @item.size%></li>
-<li><%= @item.color%></li>
-<li><%= @item.description%></li>
-<li><%= @item.price%></li>
-<li><%= @item.availability%></li>
-</ul>
+<div class="list-container2">
+  <ul class="custom-list2">
+    <li>Brand</li>
+    <li>Size</li>
+    <li>Color</li>
+    <li>Availability</li>
+    <li> <br> </li>
+    <li>Description</li>
+    <li style="color: black;"><%= @item.description %></li>
+  </ul>
 </div>
 
+<div class="list-container2">
+  <ul class="custom-list2">
+    <li style="color: black;"><%= @item.brand %></li>
+    <li style="color: black;"><%= @item.size %></li>
+    <li style="color: black;"><%= @item.color %></li>
+    <li style="color: black;"><%= @item.availability %></li>
+  </ul>
+</div>
 
-
-<div style= "width:310px; margin: 20px; padding:30px;">
+<div style= "width:310px; margin: 80px; padding:30px;">
 <%= simple_form_for [@item, @booking] do |f| %>
    <%= f.input :from, as: :string, input_html: { data: { controller: "datepicker" } } %>
   <%= f.input :to, as: :string, input_html: { data: { controller: "datepicker" } } %>
-  <%= f.submit "Book", class: "btn btn-secondary" %>
+  <h2 class="header3" style="text-align: right;">Price<br><%= @item.price %>$/day</h2>
+  <%= f.submit "Book", class: "custom-button" %>
 <% end %>
 </div>
 

@@ -10,7 +10,8 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-@import 'pages/log_in';
+@import "pages/log_in";
+@import "pages/product_p";
 
 
 .horizontal-list-container {
@@ -39,8 +40,11 @@
 }
 
 .search-field {
-  width: 880px;
-  height: 73px;
+
+  width: 480px;
+  height: 45px;
+  flex-shrink: 0;
+
   padding: 10px;
   color: #ffffff;
   background-color: #62A8BB;
