@@ -21,6 +21,8 @@ class BookingsController < ApplicationController
     redirect_to profile_path
   end
 
+  end
+
   def booking_params
     params.require(:booking).permit(:item_id, :user_id, :from, :to)
   end

@@ -1,4 +1,5 @@
 <%= simple_form_for(@item) do |f| %>
+
   <%= f.input :category, collection: Item::CATEGORY, prompt: "Select your category",
     placeholder: "example@email.com",
     input_html: { class: "form-field2" } %>
@@ -18,4 +19,5 @@
       input_html: { class: "form-field2" } %>
   <%= f.input :availability %>
   <%= f.button :button, "Add item", style: "border: 1px solid #62A8BB; border-radius: 42px;" %>
+
 <% end %>

@@ -12,6 +12,14 @@
 @import "pages/index";
 @import "pages/log_in";
 @import "pages/product_p";
+@import "pages/user_profile";
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
 
 .grid{
   display: grid;
