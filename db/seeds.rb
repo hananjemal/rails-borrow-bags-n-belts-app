@@ -51,5 +51,9 @@ items = Item.new(category: "bag", brand: "Chanel", size: "M", color: "white", de
 items.photo.attach(io: file, filename: "nes7.png", content_type: "image/png")
 items.save
 
+file = URI.open("https://res.cloudinary.com/ddicha2gs/image/upload/v1692680868/chanel_22_mini_handbag_pcgfc1.webp")
+items = Item.new(category: "bag", brand: "Chanel", size: "M", color: "white", description: "90% brand new", price: 150, availability: true)
+items.photo.attach(io: file, filename: "nes7.png", content_type: "image/png")
+items.save
 
 puts "items created"
