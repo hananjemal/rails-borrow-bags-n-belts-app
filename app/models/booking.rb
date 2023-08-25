@@ -16,9 +16,9 @@ class Booking < ApplicationRecord
     if from.present? && to.present? && from > to
       errors.add(:to, "invalid date")
       errors.add(:from, "invalid date")
-    # elsif from < Date.today && to < Date.today
-    #   errors.add(:from, "invalid date")
-    #   errors.add(:to, "invalid date")
+    elsif from < Date.today && to < Date.today
+      errors.add(:from, "invalid date")
+      errors.add(:to, "invalid date")
     end
   end
 
