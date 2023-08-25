@@ -1,6 +1,6 @@
 
 <div class="py-0">
-<div class="px-5" style="background-repeat: no-repeat; background-size: cover; background-position: center center; height: 500px; background-image: url(<%= cl_image_path('https://res.cloudinary.com/ddicha2gs/image/upload/v1692848961/Women_Fashion_Bag_5_gyvija.jpg') %>);">
+<div class="px-5" style="background-repeat: no-repeat; background-size: cover; background-position: center center; height: 500px; background-image: url('https://res.cloudinary.com/ddicha2gs/image/upload/v1692848961/Women_Fashion_Bag_5_gyvija.jpg');">
   <div style="padding-top: 120px; padding-left: 60px;">
     <h1>Woman fasion Bags & Belts</h1>
     <p style="padding-top: 30px; margin-bottom; 5px;">The world’s largest bags&belts borrowplace</p>
@@ -63,7 +63,7 @@
       <div class="product-cards-container">
         <div class="product-card">
           <div class="card-image">
-            <%= image_tag(item.picture_url, width: 300, height: 300, crop: :auto) %>
+            <%= cl_image_tag item.photo.key, width: 300, height: 300, crop: :auto %>
           </div>
           <div class="card-body">
             <h5 class="card-title"><%= item.brand %></h5>

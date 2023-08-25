@@ -2,16 +2,10 @@
 
 <div style="display: flex;justify-content: space-evenly">
 <div style= "width:410px; margin: 30px; padding:30px;">
-<%= cl_image_tag("zara_fabric_shopper_fimwzh", width: 350, height: 410, crop: :auto) %>
+<%= cl_image_tag @item.photo.key, width: 350, height: 410, crop: :auto %>
 </div>
 
-<%# <div style="display: flex;justify-content: space-evenly">
-<div style= "width:410px; margin: 20px; padding:30px;">
-<%= cl_image_tag("zara_fabric_shopper_fimwzh", width: 350, height: 410, crop: :auto) %>
-<%# <div style="display:flex; justify-content: space-between; margin-top: 10px;">
-<%# <%= cl_image_tag("zara_fabric_shopper_fimwzh", width: 100, height: 120, crop: :auto) %>
-<%# <%= cl_image_tag("zara_fabric_shopper_fimwzh", width: 100, height: 120, crop: :auto) %>
-<%# <%= cl_image_tag("zara_fabric_shopper_fimwzh", width: 100, height: 120, crop: :auto) %>
+
 
 <div class="list-container2">
   <ul class="custom-list2">
@@ -34,13 +28,9 @@
   </ul>
 </div>
 
-<div style= "width:310px; margin: 80px; padding:30px;">
-<%= simple_form_for [@item, @booking] do |f| %>
-   <%= f.input :from, as: :string, input_html: { data: { controller: "datepicker" } } %>
-  <%= f.input :to, as: :string, input_html: { data: { controller: "datepicker" } } %>
-  <h2 class="header3" style="text-align: right;">Price<br><%= @item.price %>$/day</h2>
-  <%= f.submit "Book", class: "custom-button" %>
-<% end %>
-</div>
+ <div style= "width:310px; margin: 80px; padding:30px;" data-controller="sweetalert2">
+    <%= render "bookings/form", item: @item, booking: @booking %>
+  </div>
+
 
 </div>
