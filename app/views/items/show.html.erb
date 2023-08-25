@@ -15,35 +15,29 @@
 </div>
 
 <div style= "width:210px; margin: 20px; padding:30px;">
-<ul>
-<li>Brand</li>
-<li>Size</li>
-<li>Color</li>
-<li>Description</li>
-<li>Price/day</li>
-<li>Availability</li>
-</ul>
+  <ul>
+    <li>Brand</li>
+    <li>Size</li>
+    <li>Color</li>
+    <li>Description</li>
+    <li>Price/day</li>
+    <li>Availability</li>
+  </ul>
 </div>
 
 <div style= "width:210px; margin: 20px; padding:30px;">
-<ul>
-<li><%= @item.brand%></li>
-<li><%= @item.size%></li>
-<li><%= @item.color%></li>
-<li><%= @item.description%></li>
-<li><%= @item.price%></li>
-<li><%= @item.availability%></li>
-</ul>
+  <ul>
+    <li><%= @item.brand%></li>
+    <li><%= @item.size%></li>
+    <li><%= @item.color%></li>
+    <li><%= @item.description%></li>
+    <li><%= @item.price%></li>
+    <li><%= @item.availability%></li>
+  </ul>
 </div>
 
 
-
-<div style= "width:310px; margin: 20px; padding:30px;">
-<%= simple_form_for [@item, @booking] do |f| %>
-   <%= f.input :from, as: :string, input_html: { data: { controller: "datepicker" } } %>
-  <%= f.input :to, as: :string, input_html: { data: { controller: "datepicker" } } %>
-  <%= f.submit "Book", class: "btn btn-secondary" %>
-<% end %>
-</div>
-
+  <div style= "width:310px; margin: 20px; padding:30px;" data-controller="sweetalert2">
+    <%= render "bookings/form", item: @item, booking: @booking %>
+  </div>
 </div>
