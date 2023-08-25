@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new,:create]
   end
   get 'profile', to: 'users#show'
-  #  resources :bookings, only: [:new,:create]
+
+  resources :bookings, only: [:destroy]
 end

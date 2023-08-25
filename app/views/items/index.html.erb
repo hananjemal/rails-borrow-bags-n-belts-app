@@ -61,7 +61,7 @@
       <div class="product-cards-container">
         <div class="product-card">
           <div class="card-image">
-            <%= image_tag(item.picture_url, width: 300, height: 300, crop: :auto) %>
+            <%= cl_image_tag(item.picture_url, width: 300, height: 300, crop: :auto) %>
           </div>
           <div class="card-body">
             <h5 class="card-title"><%= item.brand %></h5>
