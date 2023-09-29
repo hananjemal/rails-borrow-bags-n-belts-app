@@ -29,7 +29,7 @@
         <h3 class="header-uprofile-right">Your Rented Selection</h3>
         <% @bookings.each do |booking| %>
          <div class="card-product">
-  <img src="<%= cl_image_tag booking.item.photo.key, html: { class: "card-product img" } %>
+  <%= cl_image_tag booking.item.photo.key, html: { class: "card-product img" } %>
   <div class="card-product-infos">
     <h2 class="card-product-h2"><%= booking.item.brand %></h2>
     <p><%= booking.item.name %></p>
