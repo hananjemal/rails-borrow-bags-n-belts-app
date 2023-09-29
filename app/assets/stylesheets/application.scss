@@ -90,7 +90,6 @@
   align-items: center;
   margin:  16px 20px;
   // width: 280px;
-
 }
 
 .product-card {
@@ -109,8 +108,12 @@
   height: 100%;
   background-size: cover;
   background-position: center;
+}
+
+.image-container {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  overflow: hidden;
 }
 
 .card-body {
@@ -136,9 +139,15 @@
   border-style: none;
   margin-left: 100px;
 }
+
 .btn:hover {
   background-color: #1d7d97;
   color: white;
+}
+
+.btn-primary-show:active {
+  background-color: #0d404e !important;
+  color: white !important;
 }
 
 .p-text {

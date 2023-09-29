@@ -1,7 +1,12 @@
 .listed-box {
   background-color: #f8f9fa;
-  padding: 20px;
-  margin: 0 20px;
+  padding: 10px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 .item-image {
@@ -13,15 +18,24 @@ div.listed-box div.d-flex.custom-margin {
   margin-right: 50px;
 }
 
+.d-flex {
+  justify-content: space-between
+}
+
 .custom-link {
   color: #62A8BB;
-  font-weight: 700;
+  font-weight: 500;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
+  margin-top: 40px;
 }
 
 .custom-link:hover {
-  color: black;
+  color: #1d7d97;
+}
+
+.custom-link:active {
+  color: #0d404e;
 }
 
 
@@ -38,21 +52,20 @@ div.listed-box div.d-flex.custom-margin {
 // }
 
 .x {
-  margin-top: 100px;
+  margin : 100px;
 }
 
   .header-uprofile {
-    text-align: left;
+    text-align: center;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     letter-spacing: 1.6px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     margin-top: 40px;
-    margin-left: 200px;
-    // text-transform: uppercase;
+    text-transform: uppercase;
   }
 
   .header-uprofile-right {
@@ -65,16 +78,12 @@ div.listed-box div.d-flex.custom-margin {
     letter-spacing: 1.6px;
     margin-top: 40px;
     margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: 200px;
-    // text-transform: uppercase;
+    text-transform: uppercase;
   }
 
   .btn-primary-show {
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+    // display: inline-block;
+    margin-top: -15px;
     padding: 5px 10px;
     background-color: #62A8BB;
     color: #ffffff;
@@ -82,8 +91,8 @@ div.listed-box div.d-flex.custom-margin {
     border-radius: 42px;
     outline: none;
     border-style: none;
-    margin-left: 100px;
-    overflow: hidden;
+    // margin-left: 100px;
+    margin-bottom: 25px;
   }
 
 ///////// from kitt:
@@ -103,20 +112,22 @@ div.listed-box div.d-flex.custom-margin {
   object-fit: cover;
 }
 
-.card-product h2 {
-  font-size: 16px;
+.card-product-h2 {
+  font-size: 20px;
   font-weight: bold;
-  margin: 0;
+  margin-top: 6px;
+  // margin: 0;
 }
 
 .card-product p {
-  font-size: 12px;
+  font-size: 18px;
   line-height: 1.4;
   opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
+  // margin-bottom: 0;
+  // margin-top: 8px;
 }
 
 .card-product .card-product-infos {
   padding: 16px;
+  // margin-top: 20px;
 }
