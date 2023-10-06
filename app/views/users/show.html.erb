@@ -9,6 +9,7 @@
         <% @items.each do |item| %>
           <div class="d-flex mb-3">
             <div class="d-flex flex-column justify-content-center">
+
             <div class="card-product">
         <%= cl_image_tag item.photo.key, html: { class: "card-product img" } %>
     <div class="card-product-infos">
@@ -19,11 +20,14 @@
       <%= link_to "Delete", item_path(item), class: "custom-link", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></p>
 </div>
 </div>
+
             </div>
           </div>
         <% end %>
       </div>
     </div>
+
+
     <div class="col-md-6">
       <div class="listed-box">
         <h3 class="header-uprofile-right">Your Rented Selection</h3>
@@ -42,11 +46,10 @@
   </div>
     </div>
 </div>
+
           </div>
         <% end %>
       </div>
     </div>
   </div>
-
-
 </div>
