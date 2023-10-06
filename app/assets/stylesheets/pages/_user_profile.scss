@@ -7,6 +7,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 15px;
+  width: auto;
 }
 
 .item-image {
@@ -27,7 +28,7 @@ div.listed-box div.d-flex.custom-margin {
   font-weight: 500;
   text-decoration: none;
   font-size: 16px;
-  margin-top: 40px;
+  margin-top: 3px;
 }
 
 .custom-link:hover {
@@ -63,7 +64,7 @@ div.listed-box div.d-flex.custom-margin {
     font-weight: 700;
     line-height: normal;
     letter-spacing: 1.6px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     margin-top: 40px;
     text-transform: uppercase;
   }
@@ -83,7 +84,7 @@ div.listed-box div.d-flex.custom-margin {
 
   .btn-primary-show {
     // display: inline-block;
-    margin-top: -15px;
+    // margin-top: 10px;
     padding: 5px 10px;
     background-color: #62A8BB;
     color: #ffffff;
@@ -92,24 +93,17 @@ div.listed-box div.d-flex.custom-margin {
     outline: none;
     border-style: none;
     // margin-left: 100px;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
   }
 
 ///////// from kitt:
-.card-product {
-  overflow: hidden;
-  height: 150px;
-  background: white;
-  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-}
 
 .card-product img {
-  height: 100%;
-  width: 180px;
+  height: 180px;
+  width: 150px;
   align-items: center;
   object-fit: cover;
+  // width: 100%;
 }
 
 .card-product-h2 {
@@ -131,3 +125,32 @@ div.listed-box div.d-flex.custom-margin {
   padding: 16px;
   // margin-top: 20px;
 }
+
+
+/// card-product : your rented selection section; different height
+
+.card-product {
+  overflow: hidden;
+  justify-content: flex-start;
+  height: 180px;
+  width: 332px;
+  background: white;
+  // background: transparent;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+// .btn-user-profile {
+//   display: inline-block;
+//   margin-top: 20px;
+//   margin-bottom: 35px;
+//   padding: 5px 10px;
+//   background-color: #ffffff;
+//   // color: #62A8BB;
+//   text-decoration: none;
+//   border-radius: 42px;
+//   outline: none;
+//   border: 3px solid #62A8BB;
+//   align-items: center;
+// }
